@@ -1,0 +1,5 @@
+﻿  stdafx.cpp
+  MusicSorter.cpp
+e:\c++ projects\musicsorter\musicsorter\musicsorter.cpp(26): warning C4129: 'm': unrecognized character escape sequence
+e:\c++ projects\musicsorter\musicsorter\musicsorter.cpp(29): warning C4129: 'm': unrecognized character escape sequence
+  MusicSorter.vcxproj -> E:\c++ projects\MusicSorter\Debug\MusicSorter.exe
