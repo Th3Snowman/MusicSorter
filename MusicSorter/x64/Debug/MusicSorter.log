@@ -1,8 +1,0 @@
-﻿MusicSorter.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: virtual __cdecl TagLib::String::~String(void)" (__imp_??1String@TagLib@@UEAA@XZ) referenced in function main
-MusicSorter.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl operator<<(class std::basic_ostream<char,struct std::char_traits<char> > &,class TagLib::String const &)" (__imp_??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVString@TagLib@@@Z) referenced in function main
-MusicSorter.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: __cdecl TagLib::FileName::FileName(char const *)" (__imp_??0FileName@TagLib@@QEAA@PEBD@Z) referenced in function main
-MusicSorter.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: __cdecl TagLib::FileRef::FileRef(class TagLib::FileName,bool,enum TagLib::AudioProperties::ReadStyle)" (__imp_??0FileRef@TagLib@@QEAA@VFileName@1@_NW4ReadStyle@AudioProperties@1@@Z) referenced in function main
-MusicSorter.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: virtual __cdecl TagLib::FileRef::~FileRef(void)" (__imp_??1FileRef@TagLib@@UEAA@XZ) referenced in function main
-MusicSorter.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: class TagLib::Tag * __cdecl TagLib::FileRef::tag(void)const " (__imp_?tag@FileRef@TagLib@@QEBAPEAVTag@2@XZ) referenced in function main
-E:\Libraries\taglib-1.11.1\taglib\Release\tag.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
-E:\c++ projects\MusicSorter\x64\Debug\MusicSorter.exe : fatal error LNK1120: 6 unresolved externals
