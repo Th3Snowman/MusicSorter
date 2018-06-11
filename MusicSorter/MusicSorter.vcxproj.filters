@@ -44,8 +44,5 @@
     <ClCompile Include="ErrorFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FolderTemplate.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
