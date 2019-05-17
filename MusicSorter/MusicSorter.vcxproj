@@ -93,13 +93,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\Libraries\boost\boost_1_65_1;E:\Libraries\taglib-1.11.1\taglib\xm;E:\Libraries\taglib-1.11.1\taglib\wavpack;E:\Libraries\taglib-1.11.1\taglib\trueaudio;E:\Libraries\taglib-1.11.1\taglib\toolkit;E:\Libraries\taglib-1.11.1\taglib\tag.dir\Release;E:\Libraries\taglib-1.11.1\taglib\s3m;E:\Libraries\taglib-1.11.1\taglib\riff\aiff;E:\Libraries\taglib-1.11.1\taglib\riff\wav;E:\Libraries\taglib-1.11.1\taglib\riff;E:\Libraries\taglib-1.11.1\taglib\ogg\vorbis;E:\Libraries\taglib-1.11.1\taglib\ogg\speex;E:\Libraries\taglib-1.11.1\taglib\ogg\opus;E:\Libraries\taglib-1.11.1\taglib\ogg\flac;E:\Libraries\taglib-1.11.1\taglib\ogg;E:\Libraries\taglib-1.11.1\taglib\mpeg\id3v1;E:\Libraries\taglib-1.11.1\taglib\mpeg\id3v2;E:\Libraries\taglib-1.11.1\taglib\mpeg\id3v2\frames;E:\Libraries\taglib-1.11.1\taglib\mpeg;E:\Libraries\taglib-1.11.1\taglib\mpc;E:\Libraries\taglib-1.11.1\taglib\mp4;E:\Libraries\taglib-1.11.1\taglib\mod;E:\Libraries\taglib-1.11.1\taglib\it;E:\Libraries\taglib-1.11.1\taglib\flac;E:\Libraries\taglib-1.11.1\taglib\asf;E:\Libraries\taglib-1.11.1\taglib\ape;E:\Libraries\taglib-1.11.1\taglib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Libraries\boost\boost_1_65_1;C:\Program Files %28x86%29\taglib\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>E:\Libraries\boost\boost_1_65_1\stage\lib;E:\Libraries\taglib-1.11.1\taglib\Debug</AdditionalLibraryDirectories>
-      <AdditionalDependencies>tag.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\Libraries\boost\boost_1_65_1\stage\lib;C:\Program Files %28x86%29\taglib\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>tag.lib;tag_c.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -154,6 +154,7 @@
   <ItemGroup>
     <ClInclude Include="AlbumNode.h" />
     <ClInclude Include="ArtistNode.h" />
+    <ClInclude Include="SongException.h" />
     <ClInclude Include="SongNode.h" />
     <ClInclude Include="LibraryDB.h" />
     <ClInclude Include="stdafx.h" />

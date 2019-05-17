@@ -6,8 +6,8 @@
 #include "AlbumNode.h"
 #include "SongException.h"
 #include <map>
-#include <fileref.h>
-#include <tag.h>
+#include <taglib\fileref.h>
+#include <taglib\tag.h>
 #include <boost\filesystem.hpp>
 #include <string>
 #include <iostream>

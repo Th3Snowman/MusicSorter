@@ -1,10 +1,11 @@
 #pragma once
 #ifndef SongNode
 
-#include <fileref.h>
-#include <tag.h>
+#include <taglib\fileref.h>
+#include <taglib\tag.h>
 #include <boost\filesystem.hpp>
 #include <string>
+#include <taglib\tstring.h>
 #include "SongException.h"
 
 class SongNode {
