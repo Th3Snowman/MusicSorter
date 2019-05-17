@@ -1,5 +1,6 @@
 #pragma once
 #ifndef ArtistNode
+#define DEBUGGING true
 
 #include <string>
 #include "AlbumNode.h"
@@ -12,6 +13,7 @@ public:
 	std::string artistName;
 	bool checkAlbum(SongNode*);
 	bool addAlbum(SongNode*);
+	~ArtistNode();
 protected:
 	std::map<std::string, AlbumNode*> albums;
 };
@@ -20,6 +22,12 @@ ArtistNode::ArtistNode(SongNode* s) :
 	artistName(s->artist())
 {
 	addAlbum(s);
+}
+
+ArtistNode::~ArtistNode() {
+	for (std::map<std::string, AlbumNode*>::iterator it = albums.begin(); it != albums.end(); it++) {
+		delete(it->second);
+	}
 }
 
 bool ArtistNode::checkAlbum(SongNode* s) {
@@ -32,13 +40,15 @@ bool ArtistNode::checkAlbum(SongNode* s) {
 
 bool ArtistNode::addAlbum(SongNode* s) {
 	if (checkAlbum(s)) {
-		std::cout << s->album() << " exists" << std::endl;
+		if (DEBUGGING)
+			std::cout << s->album() << " exists" << std::endl;
 		return albums.at(s->album())->addSong(s);
 	}
 	else {
 		AlbumNode* a = new AlbumNode(s);
 		albums.insert(std::pair<std::string, AlbumNode*>(s->album(), a));
-		std::cout << s->album() << " new" << std::endl;
+		if (DEBUGGING)
+			std::cout << s->album() << " new" << std::endl;
 		return true;
 	}
 }

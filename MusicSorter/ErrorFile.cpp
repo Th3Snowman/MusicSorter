@@ -11,6 +11,8 @@ class errorClass {
 			case 2:
 				std::cout << "Error (2): one or both or paths provided are not directories" << std::endl;
 				break;
+			default:
+				std::cout << "Unknown Error" << std::endl;
 			}
 		}
 };

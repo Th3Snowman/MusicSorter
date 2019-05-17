@@ -5,6 +5,7 @@
 #include <tag.h>
 #include <boost\filesystem.hpp>
 #include <string>
+#include "SongException.h"
 
 class SongNode {
 public:
@@ -29,14 +30,18 @@ songPath(p)
 {
 	TagLib::FileRef song(songPath.c_str());
 	songTag = song.tag();
-	if (songTag->isEmpty())
-		delete this;
+	if (songTag->isEmpty()) {
+		songTag = 0;
+		throw SongException(2);
+	}
 	songName = songTag->title();
 	albumName = songTag->album();
 	artistName = songTag->artist();
 	trackNumber = songTag->track();
-	if (songName == TagLib::String::null || albumName == TagLib::String::null || artistName == TagLib::String::null || trackNumber == 0)
-		delete this;
+	if (songName == TagLib::String::null || albumName == TagLib::String::null || artistName == TagLib::String::null || trackNumber == 0) {
+		songTag = 0;
+		throw SongException(1);
+	}
 }
 
 bool SongNode::operator==(const SongNode& s) const {
